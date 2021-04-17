@@ -2,44 +2,86 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+const str_heroes = ["Abaddon","Alchemist","Axe","Beastmaster","Brewmaster","Io"]
+const agi_heroes = ["Anti-Mage","Arc_Warden","Bloodseeker","Bounty_Hunter","Broodmother"]
+const int_heroes = ["Ancient_Apparition","Bane","Batrider","Chen","Crystal_Maiden","Dark_Seer"]
+
+//src={process.env.PUBLIC_URL+'./images/Strength Heroes/Axe_icon.png'}
+// Individual hero icon
 function Square(props) {
   return (
-    <button
-      className="square"
+    <img
+      alt = "hero icon"
+      src={process.env.PUBLIC_URL+props.hero_img}
+      className={props.class}
       onClick={props.onClick}
-    >
-      {props.value}
-    </button>
+    ></img>
   );
 }
 
-class Board extends React.Component {
-  renderSquare(i) {
+class Banner extends React.Component {
+  render() {
     return (
-      <Square className = "square-selected"
-        value={this.props.squares[i]}
-        onClick={() => this.props.onClick(i)}
+      <div>Lorem Impsum</div>
+    );
+  }
+}
+
+// List of all heroes
+class Board extends React.Component {
+  renderSquare(i,attr,name) {
+
+    let className;
+    if (this.props.bans.includes(name)){
+      className = "banned-square"
+    } else if (this.props.radiant_picks.includes(name)){
+      className = "radiant-square"
+    } else if (this.props.dire_picks.includes(name)){
+      className = "dire-square"
+    } else {
+      className = "square"
+    }
+
+    console.log(name)
+    console.log(className)
+    return (
+      <Square
+        key = {name}
+        value={attr}
+        class={className}
+        hero_img={'./images/'+ attr + ' Heroes/'+ name+ '_icon.png'}
+        onClick={() => this.props.onClick(name)}
       />
     );
   }
 
   render() {
+
+    const strength_hero_list = str_heroes.map((step, i) => {
+
+      return this.renderSquare(i,"Strength",str_heroes[i])
+    })
+
+    const agility_hero_list = agi_heroes.map((step, i) => {
+
+      return this.renderSquare(i,"Agility",agi_heroes[i])
+    })
+
+    const intelligence_hero_list = int_heroes.map((step, i) => {
+
+      return this.renderSquare(i,"Intelligence",int_heroes[i])
+    })
+
     return (
       <div>
         <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
+          {strength_hero_list}
         </div>
         <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
+          {agility_hero_list}
         </div>
         <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
+          {intelligence_hero_list}
         </div>
       </div>
     );
@@ -49,33 +91,49 @@ class Board extends React.Component {
 class Game extends React.Component {
   constructor(props) {
     super(props)
+    // 5 radiant hero picks, 5 dire hero picks, banned heroes
+    // select is user selecting a banned, radiant or dire hero
     this.state = {
-      history: [{
-        squares: Array(9).fill(null)
-      }],
-      xIsNext: true
+      radiant_picks: ["Axe"],
+      dire_picks: ["Chen"],
+      bans: ["Bane"],
+      select: "B"
     }
   }
 
-  handleClick(i) {
-    const history = this.state.history
-    const current = history[history.length - 1]
-    const squares = current.squares.slice()
-    // if there is already a winner or the square is not null/empty, ignore
-    if (calculateWinner(squares) || squares[i]){
-      return
+  handleClick(name) {
+    console.log(name + ' was clicked')
+    let new_bans = this.state.bans
+    let new_radiant_picks = this.state.radiant_picks
+    let new_dire_picks = this.state.dire_picks
+
+    // if user is in ban mode
+    if (this.state.select == "B"){
+      // if hero is already in ban list, remove it from ban list
+      if (this.state.bans.includes(name)){
+        new_bans.splice(new_bans.indexOf(name),1)
+      // if hero is not in ban list, add it to list
+      } else {
+        // if hero is picked on either team, remove it from that list
+        if (this.state.radiant_picks.includes(name)){
+          new_radiant_picks.splice(new_radiant_picks.indexOf(name),1)
+        } else if (this.state.dire_picks.includes(name)){
+          new_dire_picks.splice(new_dire_picks.indexOf(name),1)
+        }
+        new_bans.push(name)
+      }
     }
-    squares[i] = this.state.xIsNext ? 'X' : 'O'
+
     this.setState({
-      history : history.concat([{
-        squares: squares
-      }]),
-      xIsNext: !this.state.xIsNext
+      radiant_picks : new_radiant_picks,
+      dire_picks : new_dire_picks,
+      bans: new_bans,
+      select: this.state.select
     })
   }
 
   render() {
-    const history = this.state.history
+    /*const history = this.state.history
     const current = history[history.length - 1]
     const winner = calculateWinner(current.squares);
     let status;
@@ -96,19 +154,25 @@ class Game extends React.Component {
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       )
-    })
+    })*/
 
     return (
-      <div className="game">
-        <div className="game-board">
-          <Board
-            squares = {current.squares}
-            onClick = {(i) => this.handleClick(i)}
-          />
+      <div className="Screen">
+        <div className ="Banner">
+          <Banner />
         </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
+        <div className="content">
+          <div className = "hero-board">
+            <Board
+              bans = {this.state.bans}
+              radiant_picks = {this.state.radiant_picks}
+              dire_picks = {this.state.dire_picks}
+              onClick = {(name) => this.handleClick(name)}
+            />
+          </div>
+          <div className="game-info">
+            <div>Under Construction!</div>
+          </div>
         </div>
       </div>
     );

@@ -1,0 +1,122 @@
+Hero Name,Attribute,Disable,Push,Greed,Reach,Physical Damage,Magic/Pure Dam,Durabilty,Healing/Save,Range,Mobility,Wave Clear,Commital,Role
+Phantom Assassin,A,0,1,4,3,4,0,1,0,2,1,1,2,Core
+Riki,A,0,0,3,3,4,0,0,0,1,2,0,3,Core
+Morphling,A,1,2,4,3,4,4,2,0,2,1,1,1,Core
+Sniper,A,0,1,4,2,3,2,0,0,4,0,2,0,Core
+Sven,S,2,1,3,2,4,0,2,0,1,1,3,4,Core
+Templar Assassin,A,0,2,3,2,4,0,2,0,0,0,3,2,Core
+Chaos Knight,S,2,1,2,2,4,0,3,0,1,2,0,1,Core
+Troll Warlord,A,2,2,3,1,3,0,2,0,1,1,2,4,Core
+Gryocopter,A,1,1,3,1,4,2,0,0,3,1,3,2,Core
+Juggernaut,A,0,1,3,1,4,1,2,2,1,1,1,3,Core
+Clinkz,A,0,2,2,1,4,0,0,0,3,2,0,1,Core
+Bristleback,S,1,1,2,1,4,0,4,0,1,1,2,0,Core
+Ursa,A,0,1,3,0,4,0,3,0,0,1,1,3,Core
+Terrorblade,A,0,4,4,0,4,0,2,1,2,0,3,4,Core
+Medusa,A,1,0,4,0,4,1,4,0,2,0,3,3,Core
+Spectre,A,0,1,4,4,3,2,4,0,2,2,1,4,Core
+Night Stalker,S,2,0,1,4,2,2,2,0,0,4,1,4,Core
+Weaver,A,0,2,3,3,3,1,0,0,0,4,2,1,Core
+Naga Siren,A,3,3,4,3,3,0,2,0,1,1,4,1,Core
+Phantom Lancer,A,0,2,4,3,3,1,2,0,1,1,1,0,Core
+Anti Mage,A ,0,1,4,3,3,1,1,0,0,4,0,2,Core
+Lycan,S,0,4,3,3,3,0,2,0,0,4,2,2,Core
+Faceless Void,A,4,1,3,3,3,1,2,0,1,2,0,4,Core
+Monkey King,A,2,1,3,3,3,0,2,0,2,3,2,2,Core
+Ember Spirit,A,1,0,3,3,3,3,1,0,3,4,2,1,Core
+Slark,A,1,0,3,3,3,1,2,0,1,3,1,3,Core
+Meepo,A,1,2,3,2,3,2,1,0,0,2,2,4,Dead
+Luna,A,1,1,3,2,3,3,0,0,1,1,2,3,Flex
+Razor,A,0,3,2,2,3,1,1,0,1,3,1,2,Core
+Magnus,S,4,1,2,2,3,1,2,0,2,2,3,3,Core
+Visage,I,2,3,1,2,3,2,1,0,2,0,2,0,Core
+Slardar,S,3,0,2,2,3,0,2,0,0,2,1,2,Core
+Tiny,S,3,4,2,1,3,3,2,1,1,0,2,2,Flex
+Lone Druid,A,2,4,4,1,3,1,2,0,0,2,3,3,Core
+Arc Warden,A ,1,2,3,1,3,3,1,1,3,0,1,1,Core
+Drow Ranger,A,1,2,3,1,3,0,0,0,3,0,2,0,Core
+Alchemist,S,1,1,3,1,3,0,3,0,1,1,1,1,Core
+Lifestealer,S,1,1,3,1,3,0,3,0,0,2,0,1,Core
+Shadow Fiend,A,0,1,3,1,3,3,0,0,0,0,3,3,Core
+Death Prophet,I,1,4,2,1,4,2,2,0,2,2,2,3,Core
+Legion Commander,S,3,1,2,1,3,1,2,3,0,2,1,3,Core
+Wraith King,S,2,3,4,0,3,0,4,0,0,0,1,2,Core
+Nature's Prophet,I,1,4,3,4,2,2,0,1,1,0,4,0,Flex
+Storm Spirit,I,2,0,3,4,2,3,0,0,1,4,3,1,Core
+Pangolier,A,3,0,2,4,2,2,2,0,2,3,3,1,Flex
+Void Spirit,I,2,0,2,4,2,3,0,0,2,4,2,1,Flex
+Queen of Pain,I,1,0,2,4,2,3,0,0,1,4,2,1,Core
+Windranger,I,1,1,3,3,2,2,0,0,3,3,2,2,Core
+Dawn Breaker,S,1,1,2,3,2,2,3,1,1,2,2,2,Core
+Kunkka,S,3,0,2,3,2,2,2,1,3,0,3,1,Flex
+Tusk,S,3,0,2,3,2,1,1,2,2,0,0,3,Flex
+Earth Shaker,S,4,0,1,3,1,3,0,0,3,0,1,2,Flex
+Elder Titan,S,2,0,1,3,2,2,1,0,2,1,1,1,Flex
+Vengeful Spirit,A,2,0,0,3,2,1,0,3,2,0,0,0,Flex
+Mirana,A,2,0,1,2,2,2,0,1,2,3,1,1,Flex
+Dragon Knight,S,2,3,2,2,2,2,4,0,1,0,2,3,Core
+Centaur Warrunner,S,2,2,2,2,2,2,3,1,0,3,1,2,Core
+Bloodseeker,A,1,1,2,2,2,3,2,0,2,2,2,1,Core
+Mars,S,3,1,2,2,2,2,2,1,1,0,2,3,Core
+Broodmother,A,1,3,2,2,2,2,1,0,1,3,2,1,Flex
+Beastmaster,S,3,3,1,2,2,1,1,0,2,0,2,2,Core
+Lina,I,2,1,2,1,2,3,0,0,3,1,3,0,Flex
+Bounty Hunter,A,0,0,1,1,2,1,0,0,2,1,0,0,Flex
+Underlord,S,2,2,2,0,2,2,2,3,1,0,3,1,Core
+Tidehunter,S,3,1,2,0,2,2,4,0,1,0,1,4,Core
+Shadow Shaman,I,4,4,1,0,2,1,0,0,2,0,3,3,Support
+Witch Doctor,I,2,0,0,0,2,2,0,2,1,0,1,1,Support
+Invoker,I,3,2,3,4,1,4,1,0,3,2,3,1,Flex
+Puck,I,4,0,2,4,1,3,0,0,3,4,2,2,Core
+Clockwerk,S,3,0,0,4,1,2,1,0,1,3,1,4,Flex
+Earth Spirit,S,3,0,0,4,1,2,1,1,2,3,1,2,Support
+Spirit Breaker,S,3,0,1,3,1,1,1,0,0,3,0,3,Flex
+Brewmaster,S,2,0,2,3,1,2,2,0,2,1,1,3,Flex
+Doom,S,4,1,2,2,1,3,1,0,1,1,1,3,Core
+Huskar,S,2,1,2,2,2,3,3,0,2,2,1,3,Core
+Snapfire,S,2,2,1,2,1,3,0,1,4,0,2,1,Support
+Leshrac,I,2,3,2,1,1,4,0,0,1,1,3,1,Flex
+Enigma,I,4,2,2,1,1,3,0,0,2,0,2,4,Flex
+Dark Seer,I,1,0,1,1,1,1,1,2,1,2,3,1,Flex
+Venomancer,A,1,1,1,1,1,4,0,0,2,0,1,0,Flex
+Hoodwink,A,2,0,1,1,1,2,0,0,3,2,2,2,Flex
+Undying,S,0,0,0,1,1,2,2,3,1,0,0,1,Support
+Viper,A,1,1,2,0,1,3,2,0,2,0,3,1,Core
+Axe,S,3,0,2,0,1,2,2,0,0,1,1,1,Core
+Silencer,I,3,0,2,0,1,2,0,0,4,0,0,4,Flex
+Enchantress,I,1,1,1,0,1,2,1,2,3,2,0,0,Support
+Abbadon,S,0,1,1,0,1,1,3,3,1,1,0,0,Flex
+Dazzle,I,0,0,1,0,1,0,0,4,1,0,1,0,Support
+Disruptor,I,3,0,0,4,0,2,0,0,3,0,1,2,Support
+Tinker,I,1,0,4,3,0,4,0,0,3,0,4,0,Core
+Timbersaw,S,0,1,3,3,0,4,3,0,2,4,4,1,Core
+Zeus,I,0,0,3,3,0,4,0,0,4,0,3,0,Flex
+Sand King,S,3,0,2,3,0,3,1,0,1,1,2,1,Core
+Dark Willow,I,3,0,1,3,0,3,1,0,1,0,1,1,Support
+Pudge,S,3,0,1,3,0,2,2,2,3,0,0,0,Support
+Phoenix,S,2,0,1,3,0,3,2,3,2,1,3,3,Support
+Nyx Assassin,A,3,0,1,2,0,3,1,0,1,1,1,2,Support
+Winter Wyvern,I,3,0,1,2,0,2,0,3,3,1,1,2,Support
+Skywrath,I,1,0,1,2,0,4,0,0,4,0,0,1,Flex
+Bane,I,4,0,0,2,0,2,0,1,2,0,0,3,Support
+Ancient Apparation,I,1,0,0,2,0,2,0,0,4,0,1,1,Support
+Batrider,I,4,0,1,2,0,3,0,0,1,3,2,2,Flex
+Lich,I,2,0,0,2,0,2,0,1,2,0,1,0,Support
+Warlock,I,3,2,0,2,1,2,0,2,1,0,0,4,Support
+Outworld Devourer,I,1,0,3,1,0,4,0,2,1,0,0,1,Flex
+Pugna,I,1,4,2,1,0,4,1,2,1,1,3,0,Core
+Ogre Magi,I,3,0,1,1,0,2,1,0,1,0,1,0,Flex
+Rubick,I,2,0,1,1,0,2,0,1,3,0,2,0,Support
+Keeper of the Light,I,1,0,1,1,0,2,0,1,3,0,4,0,Support
+Jakiro,I,2,3,0,1,0,3,1,0,3,0,3,1,Support
+Chen,I,0,3,0,1,0,0,0,3,2,0,1,1,Support
+Grim Stroke,I,3,0,0,1,0,2,0,0,3,0,3,1,Support
+Lion,I,3,0,0,1,0,3,0,0,2,0,1,1,Support
+Oracle,I,1,0,0,0,0,2,0,4,3,0,1,0,Support
+Necrophos,I,2,0,3,0,0,3,2,1,1,0,1,3,Core
+Techies,I,2,2,2,0,0,4,0,0,3,0,3,4,Support
+Omniknight,S,0,0,2,0,1,1,2,4,0,0,1,2,Flex
+Treant Protector,S,3,0,1,0,0,1,1,3,1,1,1,1,Support
+Shadow Demon,I,3,0,0,0,0,2,0,3,2,0,2,0,Support
+Crystal Maiden,I,2,0,0,0,0,2,0,0,1,0,1,0,Support
+Io,S,0,0,0,0,0,1,1,4,1,2,0,0,Support

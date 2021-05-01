@@ -35,6 +35,7 @@ ol, ul {
 .board-row > img {
   float: left;
   max-height: 28px;
+  max-width: 20px;
   /*max-width: 5%;*/
   /*line-height: 34px;
   height: 34px;

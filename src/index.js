@@ -5,8 +5,24 @@ import './index.css';
 // Importing json data created from running the JSON_assembly.py script
 import hero_data from './hero_data.json'
 console.log(hero_data)
-console.log(hero_data["Axe"])
+console.log(hero_data["Crystal_Maiden"])
 console.log(hero_data["Axe"]["Role"])
+
+const hero_traits = [
+//"Attribute",
+"Disable",
+"Push",
+"Durability",
+"Greed",
+"Range",
+"Reach",
+"Mobility",
+"Magic/Pure_Dam",
+"Physical_Damage",
+//"Role",
+"Healing/Save",
+"Commital",
+"Wave_Clear"]
 
 const str_heroes = ["Abaddon","Alchemist","Axe","Beastmaster","Brewmaster","Bristleback","Centaur_Warrunner","Chaos_Knight","Clockwerk","Dawnbreaker","Doom","Dragon_Knight","Earth_Spirit","Earthshaker","Elder_Titan","Huskar","Io","Kunkka","Legion_Commander","Lifestealer","Lycan","Magnus","Mars","Night_Stalker","Omniknight","Phoenix","Pudge","Sand_King","Slardar","Snapfire","Spirit_Breaker","Sven","Tidehunter","Timbersaw","Tiny","Treant_Protector","Tusk","Underlord","Undying","Wraith_King"]
 const agi_heroes = ["Anti-Mage", "Arc_Warden", "Bloodseeker", "Bounty_Hunter", "Broodmother", "Clinkz", "Drow_Ranger", "Ember_Spirit", "Faceless_Void", "Gyrocopter", "Hoodwink", "Juggernaut", "Lone_Druid", "Luna", "Medusa", "Meepo", "Mirana", "Monkey_King", "Morphling", "Naga_Siren", "Nyx_Assassin", "Pangolier", "Phantom_Assassin",  "Phantom_Lancer", "Razor", "Riki", "Shadow_Fiend",  "Slark", "Sniper", "Spectre", "Templar_Assassin", "Terrorblade", "Troll_Warlord", "Ursa", "Vengeful_Spirit", "Venomancer", "Viper",  "Weaver"]
@@ -117,31 +133,67 @@ class Board extends React.Component {
 
 class GameInfo extends React.Component {
   render() {
+
+    // list of banned heroes to be displayed
     const bans = this.props.bans.map((name, i) => {
 
-      return (<div key = {name}>{name}</div>)
+      return (<li key = {name}>{name}</li>)
     })
 
-    let r_greed = 0
-    let d_greed = 0
-    let r_disable = 0
-    let d_disable = 0
+    // gathers heroes on both teams and calculuates total stats
 
+    // sets up dictionary of each hero stat intialized to 0
+    let radiant_stats = {}
+    let dire_stats = {}
+    // creates key value pairs for each stat
+    for (let j = 0; j < hero_traits.length; j++){
+      radiant_stats[hero_traits[j]] = 0
+      dire_stats[hero_traits[j]] = 0
+    }
+
+    // loops through each hero on radiant and each stat for that hero and adds to dict
     for (let i = 0; i < this.props.radiant_picks.length; i++) {
       console.log(this.props.radiant_picks[i])
-      r_greed += parseInt(hero_data[this.props.radiant_picks[i]]["Greed"])
+      for (let j = 0; j < hero_traits.length; j++){
+        radiant_stats[hero_traits[j]] += parseInt(hero_data[this.props.radiant_picks[i]][hero_traits[j]])
+      }
     }
 
+    // loops through each hero on dire and each stat for that hero and adds to dict
     for (let i = 0; i < this.props.dire_picks.length; i++) {
       console.log(this.props.dire_picks[i])
-      d_greed += parseInt(hero_data[this.props.dire_picks[i]]["Greed"])
+      for (let j = 0; j < hero_traits.length; j++){
+        dire_stats[hero_traits[j]] += parseInt(hero_data[this.props.dire_picks[i]][hero_traits[j]])
+      }
     }
+
+    // create table rows for each stat for display
+    const table_rows = hero_traits.map((name,i) => {
+
+      return (
+        <tr>
+          <td>{name}</td>
+          <td>{radiant_stats[name]}</td>
+          <td>{dire_stats[name]}</td>
+        </tr>
+      )
+    })
 
     return (
       <div>
-        <div>{bans}</div>
-        <div>Radiant Greed: {r_greed}</div>
-        <div>Dire Greed: {d_greed}</div>
+        <h4>Bans</h4>
+        <ul>{bans}</ul>
+        <div className = "Table">
+          <table id = "teamStats">
+            <tr>
+              <th>Stat</th>
+              <th>Radiant</th>
+              <th>Dire</th>
+            </tr>
+            {table_rows}
+          </table>
+        </div>
+
       </div>
     )
   }
